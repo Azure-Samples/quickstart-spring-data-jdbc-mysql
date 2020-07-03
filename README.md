@@ -1,6 +1,6 @@
 # Sample project for Spring Data JDBC with MySQL
 
-This sample project is used in the [https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql?WT.mc_id=github-microsoftsamples-judubois](Use Spring Data JDBC with Azure Database for MySQL) Microsoft documentation quickstart.
+This sample project is used in the [Use Spring Data JDBC with Azure Database for MySQL](https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql/?WT.mc_id=github-microsoftsamples-judubois) Microsoft documentation quickstart.
 
 ## Creating the infrastructure
 
