@@ -23,7 +23,7 @@ echo "Creating MySQL Server instance"
 
 az mysql server create \
     --resource-group $AZ_RESOURCE_GROUP \
-    --name $AZ_DATABASE_NAME \
+    --name $AZ_DATABASE_SERVER_NAME \
     --location $AZ_LOCATION \
     --sku-name B_Gen5_1 \
     --storage-size 5120 \
@@ -37,8 +37,8 @@ echo "Allowing local IP address: $AZ_LOCAL_IP_ADDRESS"
 
 az mysql server firewall-rule create \
     --resource-group $AZ_RESOURCE_GROUP \
-    --name $AZ_DATABASE_NAME-database-allow-local-ip \
-    --server $AZ_DATABASE_NAME \
+    --name $AZ_DATABASE_SERVER_NAME-database-allow-local-ip \
+    --server $AZ_DATABASE_SERVER_NAME \
     --start-ip-address $AZ_LOCAL_IP_ADDRESS \
     --end-ip-address $AZ_LOCAL_IP_ADDRESS \
     -o tsv
@@ -48,8 +48,8 @@ echo "Configuring MySQL Server database"
 
 az mysql db create \
     --resource-group $AZ_RESOURCE_GROUP \
-    --name demo \
-    --server-name $AZ_DATABASE_NAME \
+    --name $AZ_DATABASE_NAME \
+    --server-name $AZ_DATABASE_SERVER_NAME \
     -o tsv
 
 echo "Resources..."

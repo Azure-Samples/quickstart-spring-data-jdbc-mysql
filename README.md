@@ -12,18 +12,19 @@ We recommend you create an *env.sh* file to create the following environment var
 echo "Setting env variables"
 
 export AZ_RESOURCE_GROUP=tmp-spring-jdbc-mysql
-export AZ_DATABASE_NAME=XXXXXX-tmp-spring-jdbc-mysql
+export AZ_DATABASE_SERVER_NAME=XXXXXX-tmp-spring-jdbc-mysql
+export AZ_DATABASE_NAME=XXXXXX-tmp-spring-db
 export AZ_LOCATION=eastus
 export AZ_MYSQL_USERNAME=spring
 export AZ_MYSQL_PASSWORD=XXXXXXXXXXXXXXXXXXX
 export AZ_LOCAL_IP_ADDRESS=$(curl http://whatismyip.akamai.com/)
 
-export SPRING_DATASOURCE_URL=jdbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/demo?serverTimezone=UTC
-export SPRING_DATASOURCE_USERNAME=spring@$AZ_DATABASE_NAME
+export SPRING_DATASOURCE_URL=jdbc:mysql://$AZ_DATABASE_SERVER_NAME.mysql.database.azure.com:3306/$AZ_DATABASE_NAME?serverTimezone=UTC
+export SPRING_DATASOURCE_USERNAME=spring@$AZ_DATABASE_SERVER_NAME
 export SPRING_DATASOURCE_PASSWORD=$AZ_MYSQL_PASSWORD
 ```
 
-You will need to set up a unique `AZ_DATABASE_NAME` as well as a correctly secured `AZ_MYSQL_PASSWORD`.
+You will need to set up a unique `AZ_DATABASE_SERVER_NAME` as well as a correctly secured `AZ_MYSQL_PASSWORD`.
 
 Once this file is created:
 
