@@ -1,6 +1,9 @@
 # Sample project for Spring Data JDBC with Azure Database for MySQL
 
-This sample project is used in the [Use Spring Data JDBC with Azure Database for MySQL](https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql/?WT.mc_id=github-microsoftsamples-judubois) Microsoft documentation quickstart.
+This sample project is used in these documents.
+
+1. [Use Spring Data JDBC with Azure Database for MySQL](https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-data-jdbc-with-azure-mysql/?WT.mc_id=github-microsoftsamples-judubois).
+2. [Deploy a Spring application to Azure Spring Apps with a passwordless connection to an Azure database](https://learn.microsoft.com/azure/developer/java/spring-framework/deploy-passwordless-spring-database-app?toc=%2Fazure%2Fspring-apps%2Ftoc.json&bc=%2Fazure%2Fspring-apps%2Fbreadcrumb%2Ftoc.json&tabs=mysql).
 
 ## Creating the infrastructure
 
